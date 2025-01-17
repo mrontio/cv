@@ -1,0 +1,91 @@
+
+% Macros
+% Spacebox length is the length of the text {1..9}
+\newlength{\spacebox}  
+\settowidth{\spacebox}{123456789}
+\newcommand{\sepspace}{\vspace*{1em}}
+
+\newcommand{\name}[1]{
+    \Huge
+    \fontfamily{phv}\selectfont
+    \begin{center} \textbf{#1} \end{center}\par
+    \normalsize\normalfont
+}
+
+\newcommand{\desc}[1]{
+    \normalsize
+    \fontfamily{phv}\selectfont
+    \begin{center} \textsl{#1} \end{center}\par
+    \normalsize\normalfont
+}
+
+\newcommand{\info}[2]{
+    \noindent\hangindent=2em\hangafter=0
+    \parbox{\spacebox}{%
+    \textsl{#1}}
+    #2 \par
+}
+
+\newcommand{\skill}[2]{
+    % set indent for personal info
+    \noindent\begin{minipage}{0.4\textwidth}
+    \textbf{#1}
+    \end{minipage}
+    \hfill 
+    \begin{minipage}{0.6\textwidth}
+    #2
+    \end{minipage}
+    \vspace*{1em}
+    \par
+    %\parbox{3\spacebox}{
+    %   \textbf{#1}
+    %}
+    %#2 \par
+}
+
+\newcommand{\education}[5]{
+    \noindent \textbf{#1} 
+    \hfill
+    \framebox {
+    \parbox{6em} {
+        \centering\textbf{#2 -- #3}
+    }}
+    \par
+    \noindent \textit{#4} \par
+    \hangindent=2em\hangafter=0 \small #5
+    \normalsize \par
+    \vspace*{0.5em}
+}
+
+\newcommand{\work}[5] {
+    \noindent \textbf{#1}
+    \hfill
+    \framebox {
+    \parbox{6em} {
+        \centering\textbf{#2 -- #3}
+    }}
+    \par
+    \noindent \textit{#4} \par
+    \hangindent=2em\hangafter=0 \small #5
+    \normalsize \par
+}
+
+\newcommand{\volunteering}[4] {
+    \noindent \textbf{#1}
+    \hfill
+    \framebox {
+    \parbox{6em} {
+        \centering\textbf{#2}
+    }}
+    \par
+    \noindent \textit {#3} \par
+    \noindent\hangindent=2em\hangafter=0 \small #4
+    \normalsize \par
+}
+
+\newcommand{\summary}[1]{  \large % font size
+  \fontfamily{phv}\selectfont % font family
+% print motto centered and slanted
+  \begin{center} \textsl{#1}\end{center}\par
+% back to normal size and font
+  \normalsize \normalfont}

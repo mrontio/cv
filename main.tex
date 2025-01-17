@@ -1,0 +1,100 @@
+% Following CV tutorial https://latex-tutorial.com/cv-latex-guide/
+\documentclass[11pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{tgpagella}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=20mm,
+    %right=
+    %bottom=
+    top=15mm
+}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{\baselineskip}{\baselineskip} % left, before, after
+
+\pagestyle{empty}
+
+\usepackage{enumitem}
+
+\usepackage{sectsty}
+\sectionfont {
+    \raggedright
+    \large
+    \fontfamily{bch}\selectfont
+    \sectionrule{0pt}{0pt}{-7pt}{1pt} % insert a thin rule
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={CV - Michail Rontionov},
+}
+
+\input{macros}
+
+\begin{document}
+    \name{Michail Rontionov}
+
+    \info{Email}{\href{mailto:mrontionov@meetowl.site}{mrontionov@meetowl.site}}
+    \info{Phone}{\href{tel:+447895682664}{+44 7895 682664}}
+    %\info{LinkedIn}{\href{https://www.linkedin.com/in/michail-rontionov-64810b183/}{Michail Rontionov}}
+    %\info{Address}{49 Blenheim Gardens, Southampton, UK, SO17 3RN}
+
+    \section*{Personal Profile}
+    \summary{A PhD student driven by passion and people, always looking to improve myself. My experience is rooted in research, where self motivation and time management are key to success, as well as communication with fellow researchers and stakeholders.}
+
+    \section*{Education}
+    \education{PhD in MINDS Programme}{2023}{2027}{University of Southampton}{
+    Collaborate with students on building the next generation of hardware tools, algorithms and devices. Assist professors in teaching through labs and lectures.
+    }
+    \education{MSci in Computer Science with a Year in Industry}{2018}{2023}{Swansea University}{
+    Gained team working experience by building team projects. Improved self motivation, time management and problem solving to complete Bachelor's and Master's thesis. Graduated with First-class Honours.}
+
+    \section*{Work Experience}
+    \work{HPC Engineer Intern}{2020}{2021}{Intel Corporation}{
+    Worked with customers to optimise applications on Intel platforms. Lead installations of tens of servers into the computer lab. Collaborated with senior employees to deliver value to customers.}
+    \work{Computer Science Teaching Assistant}{2019}{2023}{Swansea University}{
+    Helped lecturers create ideal learning environment by setting up labs and managing inventory. Checked student's lab work for correctness and functionality, and communicated concepts or procedures which may not have been clear in lectures.}
+    \work{I.T. Manager}{2017}{2018}{Father's real estate company}{
+    Sole I.T. employee for a team of 6 people, requiring me to manage time effectively and develop a deep understanding of the evolving computer architecture.
+    }
+
+    \section*{Volunteering}
+    \volunteering{Ambassador Volunteer}{2018 --- 2020}{Technocamps}{
+    Contributed time to organisation providing after-school science activities to children aged 10 to 16. Required understanding of children's intuition and develop explanations which worked for each individual, and managed the environment for a fun and engaging learning class.}
+    \newpage
+    \volunteering{Swansea University Ecological Volunteering}{2021 --- 2022}{Swansea University}{
+    Cleaned up beaches and uprooted trees in Swansea's ecologically sensitive habitats to promote local flora and fauna.}
+    \volunteering{General Volunteering}{2018 --- 2019}{Discovery Volunteering}{Numerous volunteering opportunities, including running events for people in need of help, preparing hygiene kits for homeless and park cleanings.}
+
+    \section*{Skills}
+    \skill{Software}{Microsoft Office Suite, Trello, Linux, Jupyter Notebook}
+    \skill{Programming Languages}{C, C++, Python, Java, Verilog, Haskell}
+    \skill{Soft Skills}{Team work, teaching, working with children, self-management, problem solving, time management}
+    \skill{Physical Skills}{Computer Maintenance, Bicycle Repair, Electronics Soldering, Inventory Management}
+
+    \section*{Interests}
+    \begin{itemize}
+        \item Sports --- Cycling, hiking, camping and mountain biking all require team work to compete or enjoy fully.
+        \item Hobbies --- Programming, playing guitar and historical computing reinforce my self motivation to do the things I enjoy.
+        \item Going out --- Festivals, gigs, and concerts.
+    \end{itemize}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
