@@ -31,17 +31,17 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p site
-          cp latex/main.pdf site/mront-cv.pdf
+          cp latex/main.pdf site/mrontio-cv.pdf
           cat <<'HTML' > site/index.html
           <!doctype html>
           <html lang="en">
             <head>
               <meta charset="utf-8" />
-              <title>Marc Rontard CV</title>
-              <meta http-equiv="refresh" content="0; url=mront-cv.pdf" />
+              <title>Michail Rontionov CV</title>
+              <meta http-equiv="refresh" content="0; url=mrontio-cv.pdf" />
             </head>
             <body>
-              <p><a href="mront-cv.pdf">Click here if you are not redirected.</a></p>
+              <p><a href="mrontio-cv.pdf">Click here if you are not redirected.</a></p>
             </body>
           </html>
           HTML
