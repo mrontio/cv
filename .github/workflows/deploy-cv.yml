@@ -1,0 +1,63 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          working_directory: latex
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p site
+          cp latex/main.pdf site/mront-cv.pdf
+          cat <<'HTML' > site/index.html
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8" />
+              <title>Marc Rontard CV</title>
+              <meta http-equiv="refresh" content="0; url=mront-cv.pdf" />
+            </head>
+            <body>
+              <p><a href="mront-cv.pdf">Click here if you are not redirected.</a></p>
+            </body>
+          </html>
+          HTML
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
