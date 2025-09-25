@@ -1,7 +1,7 @@
 
 % Macros
 % Spacebox length is the length of the text {1..9}
-\newlength{\spacebox}  
+\newlength{\spacebox}
 \settowidth{\spacebox}{123456789}
 \newcommand{\sepspace}{\vspace*{1em}}
 
@@ -28,11 +28,11 @@
 
 \newcommand{\skill}[2]{
     % set indent for personal info
-    \noindent\begin{minipage}{0.4\textwidth}
+    \noindent\begin{minipage}{0.3\textwidth}
     \textbf{#1}
     \end{minipage}
-    \hfill 
-    \begin{minipage}{0.6\textwidth}
+    \hfill
+    \begin{minipage}{0.7\textwidth}
     #2
     \end{minipage}
     \vspace*{1em}
@@ -44,7 +44,7 @@
 }
 
 \newcommand{\education}[5]{
-    \noindent \textbf{#1} 
+    \noindent \textbf{#1}
     \hfill
     \framebox {
     \parbox{6em} {
@@ -58,14 +58,14 @@
 }
 
 \newcommand{\work}[5] {
-    \noindent \textbf{#1}
+    \noindent \textit{#1}
     \hfill
     \framebox {
     \parbox{6em} {
         \centering\textbf{#2 -- #3}
     }}
     \par
-    \noindent \textit{#4} \par
+    \noindent \textbf{#4} \par
     \hangindent=2em\hangafter=0 \small #5
     \normalsize \par
 }
@@ -89,3 +89,8 @@
   \begin{center} \textsl{#1}\end{center}\par
 % back to normal size and font
   \normalsize \normalfont}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: "main"
+%%% End:
