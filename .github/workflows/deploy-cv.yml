@@ -31,18 +31,18 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           mkdir -p site/cv
-          cp latex/main.pdf site/index.pdf
+          cp latex/main.pdf site/mrontionov-cv.pdf
           cat <<'HTML' > site/index.html
             <!doctype html>
               <html lang="en">
               <head>
                 <meta charset="utf-8" />
                 <title>Michail Rontionov</title>
-                <meta http-equiv="refresh" content="0; url=index.pdf" />
+                <meta http-equiv="refresh" content="0; url=mrontionov-cv.pdf" />
               </head>
               <body style="display:flex;justify-content:center;align-items:center;min-height:100vh;background:#fff;">
                 <p style="font-family:'Latin Modern Roman', 'Times New Roman', Times, serif; color:#666; font-size:1.3rem;">
-                <a href="index.pdf" style="color:#666;text-decoration:none;">Click here to redirect.</a>
+                <a href="mrontionov-cv.pdf" style="color:#666;text-decoration:none;">Click here to redirect.</a>
                 </p>
               </body>
             </html>
