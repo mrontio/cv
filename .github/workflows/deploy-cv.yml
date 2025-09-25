@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p site/cv
           cp latex/main.pdf site/index.pdf
-          cat <<'HTML' > site/cv/index.html
+          cat <<'HTML' > site/index.html
             <!doctype html>
               <html lang="en">
               <head>
