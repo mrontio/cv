@@ -32,6 +32,21 @@ jobs:
         run: |
           mkdir -p site/cv
           cp latex/main.pdf site/index.pdf
+          cat <<'HTML' > site/cv/index.html
+            <!doctype html>
+              <html lang="en">
+              <head>
+                <meta charset="utf-8" />
+                <title>Michail Rontionov</title>
+                <meta http-equiv="refresh" content="0; url=index.pdf" />
+              </head>
+              <body style="display:flex;justify-content:center;align-items:center;min-height:100vh;background:#fff;">
+                <p style="font-family:'Latin Modern Roman', 'Times New Roman', Times, serif; color:#666; font-size:1.3rem;">
+                <a href="index.pdf" style="color:#666;text-decoration:none;">Click here to redirect.</a>
+                </p>
+              </body>
+            </html>
+            HTML
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
