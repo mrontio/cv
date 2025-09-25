@@ -14,7 +14,7 @@
     a4paper,
     left=20mm,
     %right=
-    %bottom=
+    bottom=10mm,
     top=15mm
 }
 
@@ -58,24 +58,41 @@
 
     \section*{Education}
     \education{PhD in Artificial Intelligence, Compter Science and Electronics}{2023}{2027}{University of Southampton}{
-      \noindent Integrated PhD as part of MINDS CDT.\\
-      Dissertation: ``Neuromorphic Computing: Representations, compilation and digital architectures.'' \\
-      Supervisors: Prof. David Thomas, Dr. Ruomeng Huang. \\
-      The PhD explores the novel paradigm of neuromorphic computing and contributes to formalisation of a neuromorphic algorithms, whilst designing a neuromorphic accelerator and neural network to FPGA compiler to be evaluated in real-life scenarios.
+      \noindent Integrated PhD as part of MINDS CDT.
+      \begin{itemize}
+      \item Currently in month 12 of 36 of PhD with working dissertation \\``Neuromorphic Computing: Representations, Compilation and Digital Architectures.''
+      \item Supervised by Prof. David Thomas and Dr. Ruomeng Huang.
+      \item Self-identified PhD topic based on interests in electronics, computer science and AI.
+      \item Attended multiple neuromorphic conferences and found collaborators, first paper to be submitted to ISCAS in mid-October.
+      \item Currently creating a compiler from spiking neural networks to FPGAs, creating a dedicated accelerator, and learning Agda to create a type-safe language for neuromorphic computing.
+      \end{itemize}
     }
     \education{MSci in Computer Science with a Year in Industry}{2018}{2023}{Swansea University}{
-      \noindent Integrated Master's with First Class Honours. \\
-      MSci Dissertation: HoP: Higher-order framework for the PYNQ FPGA Ecosystem, supervised by Dr. Cécilia Pradic.\\
-      BSc Dissertation: Implementing Single-Event Upset Fault Tolerance onto a RISC-V Core, supervised by Dr. Shane Fleming.\\
-      Gained experience with full-stack software engineering, digital design on FPGAs, and collaborations through courseworks and assessments.}
+      \noindent Integrated Master's with First Class Honours.
+      \begin{itemize}
+      \item MSci Dissertation: Higher-order framework for the PYNQ FPGA Ecosystem, supervised by Dr. Cécilia Pradic, to enable using hardware objects as higher-order primitives (map, reduce, etc.)
+      \item BSc Dissertation: Implementing Single-Event Upset Fault Tolerance onto a RISC-V Core, supervised by Dr. Shane Fleming, which allowed a RISC-V core to be used in satellites.
+      \end{itemize}
+    }
+
+
 
 
     \section*{Work Experience}
     \work{HPC Engineer Intern}{2020}{2021}{Intel Corporation}{
-    Worked with customers to optimise applications on Intel HPC platform. Got to work with pre-production versions of Ice Lake Xeon CPUs, and Intel's first dedicated graphics product DG1. Wrote low-level applications for improved memory management, including cache-level optimisations. Maintained research lab and lead installations of tens of high-end nodes. Collaborated with senior employees to deliver complex systems for financial customers.}
-    \work{Computer Science Teaching Assistant}{2019}{2023}{Swansea University}{
-      Helped lecturers create ideal learning environment by checking student's lab work for correctness, and aided students in understanding of concepts and procedures.}
+      \begin{itemize}
+      \item Profiled financial customer applications with VTune and achieved 1.5x to 4x imporevements in memory speeds and throughput purely with AVX512, C intrinics and proprietary knowledge.
+      \item Authored a tool to map logical CPU cores to physical cores based on debug statistics for cache allocation improvements, reduced average cache transfer latencies by 25\%.
+      \item Maintained the Swindon lab for the HPC working group, which included installing new systems, upgrading existing ones, and fixing issues as they arose.
+      \end{itemize}
+    }
     \newpage
+    \work{Computer Science Teaching Assistant}{2019}{2023}{Swansea University}{
+      \begin{itemize}
+      \item Marked first to third year labs as a side job alongside the undergraduate degree.
+      \item Helped students with questions relating to Java, Haskell, Prolog, and computer science theory.
+      \end{itemize}
+    }
     \work{I.T. Manager}{2017}{2018}{Melody Real Estate Management}{
     Part-time job during Secondary School. Sole I.T. employee for a team of 6 people; required understanding and acting on employee's concerns, fixing day-to-day I.T. issues, and maintaining systems.
     }
@@ -99,9 +116,8 @@
     \section*{Interests}
     \begin{itemize}
     \item Systems --- I enjoy building homelab systems on the cheap.
-    \item Cycling --- Cycling has been my choice of sport since I was a teenager, my current interest is in gravel biking and bike packing.
+    \item Cycling --- Choice of sport since I was a teenager, currently into bike packing.
     \item Hiking --- Camping and hiking is what I always aim to do more of.
-    \item Software  --- Mostly tinkering with Emacs or NixOS, contributing to open source.
     \item Reading --- Currently : The Joy of Abstraction: An Exploration of Math, Category Theory and Life by Eugenia Cheng.
     \end{itemize}
 
